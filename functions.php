@@ -244,8 +244,32 @@ function custom_image_sizes_choose( $sizes ) {
       return $status_text;
     }
 
-   
+// Igresar email si no esta repetido (usado con Ajax)
+    function insert_email(){
+        $email = $_POST['email'];//'alala@nfdsnvm.com';
+    
+        $the_query = new WP_Query( array( 'post_type' => 'email') );
+        $is_unique = true;
+        $title = '';
+        while ( $the_query->have_posts() ) : $the_query->the_post();
+            if( get_the_title() == $email ){ $is_unique = false;  break;}
+        endwhile;
+        wp_reset_postdata();
 
+        if($is_unique){
+            $my_post = array(
+                 'post_title' => $email,
+                 'post_type' => 'email',
+                 'post_status' => 'publish' 
+            );
+            wp_insert_post( $my_post );
+        }
+    
+        die($is_unique);
+    }
+
+    add_action( 'wp_ajax_nopriv_insert_email', 'insert_email' );  
+    add_action( 'wp_ajax_insert_email', 'insert_email' );
 
 ?>
 

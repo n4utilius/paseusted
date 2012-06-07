@@ -51,6 +51,7 @@
 						<label>Registrate y se parte de la comunidad de Pase Usted</label>
 						<input type="submit" value="Enviar >>" />
 						<input type="text" placeholder="e-mail" name="email" id="in-email"/>
+						<div id='r-email'> </div>
 					</form>
 
 					<div class="social">

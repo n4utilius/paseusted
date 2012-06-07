@@ -2,8 +2,8 @@
 	Theme Name: Pase Usted
 	Description: Template de renovación del sitio de paseusted.org
 	Author: Kevin
-	Version: 1.0
-	Tags: custom-menu, full-width-template, right-sidebar
+	Version: 2.0
+	Tags: menu-fixed, center, ftle-sidebar
 */
 
 /* reset, base y fonts*/
@@ -347,8 +347,18 @@ ul.menu{
 	margin: 0px 6px 0px 0px;
 	float: left;
 	position: absolute;
+	z-index:1;
 }
 
+.subscribir div#r-email{
+	font-size:0.85em;
+	margin-left: 300px;
+	float: left;
+	margin-top: 1px;
+	margin-right:1px;
+	position: relative;
+	z-index:10;
+}
 .subscribir input[type=text]{
 	font-size:0.8em;
 	text-indent:2px;
@@ -358,7 +368,9 @@ ul.menu{
 	float: right;
 	position: relative;
 	border:0px;
+	z-index:1;
 }
+
 
 .subscribir input[type=submit]{
 	font-family:"OpenSans-Semibold", Helvetica,  Arial;
@@ -370,6 +382,7 @@ ul.menu{
 	float: right;
 	position: relative;
 	border:0px;
+	z-index:1;
 }
 
 .tags{
