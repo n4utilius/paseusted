@@ -152,6 +152,7 @@ aside .about, aside .tags, aside .categorias{
 .categorias li{
 	border-left:1px solid #000;
 	border-right:1px solid #000;
+	list-style:none;
 	padding: 5px;
 	margin: 0px;
 	width:168px;

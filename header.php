@@ -20,25 +20,6 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 
-	<?php /*
-		if(isset($_POST['new_post']) == '1') {
-		    $post_title = $_POST['email'];
-
-		    $new_post = array(
-		          'ID' => '',
-		          'post_title' => $post_title,
-		          'post_type' => 'email'
-		        );
-
-		    $post_id = wp_insert_post($new_post);
-
-		    $post = get_post($post_id);
-		    wp_redirect($post->guid);
-		}   
-	?>
-
-	<?php wp_insert_post( $post, $wp_error ); */?> 
-
 </head>
 
 <body>
@@ -78,10 +59,13 @@
 						}
 					?>
 				</ul>
-				<form id="searchform" method="get" action="<?php bloginfo('url'); ?>/search">
+
+				<?php get_search_form(); ?>
+
+				<!--form id="searchform" method="get" action="<?php bloginfo('url'); ?>/search">
 					<input type="text"  placeholder="Búsqueda" name="concept" id="concept" />
 					<input type="submit"  value="" />
-				</form>
+				</form-->
 				
 			</nav>	
 		</header>

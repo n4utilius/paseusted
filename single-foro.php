@@ -10,25 +10,27 @@
 					<div id="post">
 						<div id="texto">
 							<?php 
-								$terms = get_the_terms( $post->ID, 'secciones' );					
+								$terms = get_the_terms( $post->ID, 'secciones' );	
+        						$meta = get_post_meta($post->ID,'_my_meta',TRUE);
+
 								$seccion_array = array();
 								if ( $terms && ! is_wp_error( $terms ) ) {
 									foreach ( $terms as $term ) { $seccion_array[] = $term->name;}
 									$seccion = join( "-", $seccion_array ); 
 								}
 
-								
-									$video = get_post_meta($post->ID, 'video-id', true); ?>
-									<iframe width="450" height="320" src="http://www.youtube.com/embed/<?php echo $video?>" frameborder="0" allowfullscreen></iframe>
-
-									<div id="platica"> <?php echo get_post_meta($post->ID, 'talk-name', true); ?> </div>
+									$video_id = ( !empty($meta['video_id']) )? $meta['video_id']: ''; 
+									if ($video_id !=''){?>
+										<iframe width="450" height="320" src="http://www.youtube.com/embed/<?php echo $video_id ?>" frameborder="0" allowfullscreen></iframe>
+									<?php } ?>
+									<div id="platica"> <?php if(!empty($meta['platica'])) echo $meta['platica']; ?> </div>
 									
-									<div id="foro"> FORO: <?php echo get_post_meta($post->ID, 'foro', true); ?> </div>	
+									<div id="foro"> FORO: <?php if(!empty($meta['foro'])) echo $meta['foro']; ?> </div>	
 						  				
 									<?php the_content(); ?>
 									<div id="biografía"> 
 										<label>BIOGRAFÍA:</label> 
-										<p><?php echo get_post_meta($post->ID, 'biografía', true); ?> </p>
+										<p><?php  if(!empty($meta['biografia'])) echo $meta['biografia']; ?> </p>
 									</div>
 	 					  
 
