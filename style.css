@@ -141,7 +141,7 @@ aside .about, aside .tags, aside .categorias{
 	width:188px;
 	height:176px;
 	float: left;
-	font:1.25em oblique;
+	font:1.1em oblique;
 	top:0px;
 }
 .categorias{
@@ -234,8 +234,6 @@ aside .about, aside .tags, aside .categorias{
 	height: 17px;
 	padding:5px 0px 3px 1px;
 	float: right;
-
-
 }
 
 .lang ul{ display:inline; }
@@ -244,7 +242,7 @@ aside .about, aside .tags, aside .categorias{
 	list-style: none;
 	float: left;
 	padding-left:5px;
-	padding-right:6px;
+	padding-right:5px;
 }
 
 .lang ul li:first-child{
@@ -337,7 +335,7 @@ ul.menu{
 
 .subscribir{
 	padding: 0px;
-	margin:0px;
+	margin-right:-10px;
 	float:left;
 	width:490px;
 }
@@ -347,7 +345,7 @@ ul.menu{
 	font-weight:bold;
 	margin: 0px 6px 0px 0px;
 	float: left;
-	position: absolute;
+	position: relative;
 	z-index:1;
 }
 
@@ -367,21 +365,22 @@ ul.menu{
 	margin: 0px;
 	padding: 0px;
 	float: right;
-	position: relative;
+	position: absolute;
 	border:0px;
 	z-index:1;
+	width:100px
 }
 
 
 .subscribir input[type=submit]{
 	font-family:"OpenSans-Semibold", Helvetica,  Arial;
 	font-size:0.7em;
-	height:17px;
-	margin-top: -1px;
+	height:18px;
+	margin-top: -2px;
 	width:60px;
-	padding: 3px;
 	float: right;
 	position: relative;
+	padding-bottom: 2px;
 	border:0px;
 	z-index:1;
 }
@@ -459,9 +458,10 @@ ul.menu{
 	.twitter{
 		width:168px;
 		margin:0px 8px;
-		position: relative;
+		float:left
 	}
 
+/*
 	.twitter li a{
 		color:#777;
 		text-decoration:none;
@@ -475,104 +475,75 @@ ul.menu{
 		height:15px;
 		float: left;
 		font-weight:bold;
-	}
+	}*/
+.twtr-doc{
+	margin:3px;
+}
 
-	.twitter li{
-		list-style:none;
-		float: left;
-		margin: 0px 0px 10px 0px;
-		padding: 0px 0px 20px 0px;
-		font-size:0.9em;
-		border-bottom:1.6px #000 dotted;
-	}
+.twtr-hd{
+	background-color:#fff;
+	border:0px; 
+	padding:0px;
+	margin:0px;
+}
 
-	.twitter li .mensaje{
-		background-color: #ccc;
-		padding: 5px;
-		word-wrap:break-word;
-	}
+.twtr-hd a, .twtr-hd h4{
+	display:none;
+}
 
-	.twitter li .coletilla{
-		height:0px;
-		width:0px;
-		padding: 0px;
-		margin: 0px;
-		border-top:5px #ccc solid;
-		border-right:5px #ccc solid;
-		border-bottom:5px #fff solid;
-		border-left:5px #fff solid;
-		float: left;
-	}
+.twtr-hd h3{
+	background: url('images/twitter-bird.gif') transparent top right no-repeat;
+	width:100px;
+	height:18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size:1.5em;
+	text-indent:left;
+}
 
-	.twitter li .info{
-		padding: 4px 0px 0px 0px;
-		margin: 0px;
-		float:right;
-		font-size:0.9em;
-		color:#999;
-	}
+.twtr-user, .twtr-ft, .twtr-avatar,
+.twtr-rt, .twtr-fav {display:none;}
 
-/*
-	.tweet{
-		width:168px;
-		margin:0px 8px;
-		position: relative;
-	}
+.twtr-tweet{
+	margin-left:-8px;
+	font-size: 1em;
+}
 
-	.tweet div a{
-		color:#999;
-		text-decoration:none;
-	}
+.twtr-tweet-wrap .twtr-tweet-text {
+	word-wrap: break-word;
+}
 
-	.tweet div a:hover{ color:#555; }
+.twtr-tweet-wrap .twtr-tweet-text p{
+	min-width:180px;
+	padding: 5px;
+	background-color: #ccc;
+	width:auto;
+}
 
-	.tweet p {
-		background: url('images/twitter-bird.gif') transparent top right no-repeat;
-		width:130px;
-		height:15px;
-		font-weight:bold;
-		margin:5px;
-	}
+.twtr-tweet-wrap .twtr-tweet-text p em{
+	background-color: #fff;
+	text-align:right;
+	font-size: 0.85em;
+	padding:8px -2px;
+	margin-top: 5px;
+}
 
-	.tweet div{
-		float: left;
-		margin: 0px 0px 10px 0px;
-		padding: 0px 0px 20px 0px;
-		font-size:0.9em;
-		border-bottom:1.6px #000 dotted;
-	}
+.twtr-tweet-wrap .twtr-tweet-text p em:before {
+   content:"";
+   position: relative;
+   top: 13px;
+   left:-65px;
+   width: 0;
+   height: 0;
+   border-top: 15px solid #ccc;
+   border-left: 15px solid transparent;
 
-	.twitter li .mensaje{
-		background-color: #ccc;
-		padding: 5px;
-		word-wrap:break-word;
-	}
-
-	.twitter li .coletilla{
-		height:0px;
-		width:0px;
-		padding: 0px;
-		margin: 0px;
-		border-top:5px #ccc solid;
-		border-right:5px #ccc solid;
-		border-bottom:5px #fff solid;
-		border-left:5px #fff solid;
-		float: left;
-	}
-
-	.twitter li .info{
-		padding: 4px 0px 0px 0px;
-		margin: 0px;
-		float:right;
-		font-size:0.9em;
-		color:#999;
-	}
-*/
+}
 #contenido{
 	padding: 0px 0px 0px 20px;
 	border-left:1px solid #999;
 	margin-top: 20px;
-		width:699px;
+	width:699px;
 	height:auto;
 	position:absolute;
 	top:121px;

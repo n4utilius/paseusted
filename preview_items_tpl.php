@@ -20,6 +20,7 @@
 								<?php comments_popup_link();?>
 								<a class="link" href="<?php the_permalink() ?>">Más >></a>
 							</div>
+							
 							<div class="capa-trans">
 								<p class="encabezado"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a> </p>
 								<div class="icons">

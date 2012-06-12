@@ -57,10 +57,34 @@
 					<?php get_cat_title('proyecto') ?>
 				</li>
 			</ul>
-				
-			<ul class="twitter">
-				<p>PASE USTED </p>
-				<?php getTwitterStatus('paseusted', 4); ?>
-			</ul>
-
+			<div class="twitter">	
+				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+					new TWTR.Widget({
+					  version: 2,
+					  type: 'profile',
+					  rpp: 3,
+					  interval: 30000,
+					  width: 180,
+					  height: 500,
+					  theme: {
+					    shell: {
+					      background: '#fff',
+					      color: '#6b516b'
+					    },
+					    tweets: {
+					      background: '#fff',
+					      color: '#050505',
+					      links: '#80827f'
+					    }
+					  },
+					  features: {
+					    scrollbar: false,
+					    loop: false,
+					    live: true,
+					    behavior: 'all'
+					  }
+					}).render().setUser('paseusted').start();
+				</script>
+			</div>
 	</aside>

@@ -61,11 +61,6 @@
 				</ul>
 
 				<?php get_search_form(); ?>
-
-				<!--form id="searchform" method="get" action="<?php bloginfo('url'); ?>/search">
-					<input type="text"  placeholder="Búsqueda" name="concept" id="concept" />
-					<input type="submit"  value="" />
-				</form-->
 				
 			</nav>	
 		</header>
